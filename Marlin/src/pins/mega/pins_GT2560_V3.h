@@ -107,25 +107,25 @@
 #define X_DIR_PIN                             39
 #define X_ENABLE_PIN                          35
 
-#define Y_STEP_PIN                            31
-#define Y_DIR_PIN                             33
-#define Y_ENABLE_PIN                          29
+#define Y_STEP_PIN                            46    //Y on E0 port in pcb
+#define Y_DIR_PIN                             44    //Y on E0 port in pcb
+#define Y_ENABLE_PIN                          12    //Y on E0 port in pcb
 
 #define Z_STEP_PIN                            25
 #define Z_DIR_PIN                             23
 #define Z_ENABLE_PIN                          27
 
-#define E0_STEP_PIN                           46
-#define E0_DIR_PIN                            44
-#define E0_ENABLE_PIN                         12
+#define Z2_STEP_PIN                           31    //Z2 on Y port in pcb31
+#define Z2_DIR_PIN                            33    //Z2 on Y port in pcb33
+#define Z2_ENABLE_PIN                         29    //Z2 on Y port in pcb29
 
-#define E1_STEP_PIN                           49
-#define E1_DIR_PIN                            47
-#define E1_ENABLE_PIN                         48
+#define E0_STEP_PIN                           49    //E0 on E1 port in pcb
+#define E0_DIR_PIN                            47    //E0 on E1 port in pcb
+#define E0_ENABLE_PIN                         48    //E0 on E1 port in pcb
 
-#define E2_STEP_PIN                           43
-#define E2_DIR_PIN                            45
-#define E2_ENABLE_PIN                         41
+#define E1_STEP_PIN                           43    //E1 on E2 port in pcb
+#define E1_DIR_PIN                            45    //E1 on E2 port in pcb
+#define E1_ENABLE_PIN                         41    //E1 on E2 port in pcb
 
 //
 // Temperature Sensors
