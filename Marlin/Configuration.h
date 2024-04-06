@@ -1705,7 +1705,7 @@
 //#define Z_HOMING_HEIGHT  4      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...
                                   // Be sure to have this much clearance over your Z_MAX_POS to prevent grinding.
 
-//#define Z_AFTER_HOMING  10      // (mm) Height to move to after homing Z
+#define Z_AFTER_HOMING  10      // (mm) Height to move to after homing Z
 
 // Direction of endstops when homing; 1=MAX, -1=MIN
 // :[-1,1]
@@ -2120,15 +2120,15 @@
  * - Allows Z homing only when XY positions are known and trusted.
  * - If stepper drivers sleep, XY homing may be required again before Z homing.
  */
-//#define Z_SAFE_HOMING
+#define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-  #define Z_SAFE_HOMING_X_POINT X_CENTER  // (mm) X point for Z homing
-  #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // (mm) Y point for Z homing
+  #define Z_SAFE_HOMING_X_POINT 33  // (mm) X point for Z homing
+  #define Z_SAFE_HOMING_Y_POINT 55  // (mm) Y point for Z homing
 #endif
 
 // Homing speeds (linear=mm/min, rotational=°/min)
-#define HOMING_FEEDRATE_MM_M { (80*60), (80*60), (20*60) }
+#define HOMING_FEEDRATE_MM_M { (80*60), (80*60), (2*60) }
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
