@@ -21,6 +21,8 @@
  */
 #pragma once
 
+#include "../../PCB_Settings.h"
+
 #ifndef __MARLIN_FIRMWARE__
 #define __MARLIN_FIRMWARE__
 #endif

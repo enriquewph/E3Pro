@@ -146,6 +146,10 @@
 #define FAN1_PIN                               8
 #define FAN2_PIN                               7
 
+// my cnc connections
+#define SPINDLE_LASER_ENA_PIN                 HEATER_2_PIN
+#define AIR_EVACUATION_PIN                    FAN2_PIN
+
 //
 // Misc. Functions
 //

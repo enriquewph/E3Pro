@@ -260,8 +260,8 @@ G29_TYPE GcodeSuite::G29() {
   if (parser.seen_test('N'))
     process_subcommands_now(TERN(CAN_SET_LEVELING_AFTER_G28, F("G28L0"), FPSTR(G28_STR)));
 
-  // Don't allow auto-leveling without homing first
-  if (homing_needed_error()) G29_RETURN(false, false);
+  // Don't allow auto-leveling without homing first - well it looks like we can.
+  //if (homing_needed_error()) G29_RETURN(false, false);
 
   // 3-point leveling gets points from the probe class
   #if ENABLED(AUTO_BED_LEVELING_3POINT)
@@ -394,8 +394,10 @@ G29_TYPE GcodeSuite::G29() {
 
       xy_probe_feedrate_mm_s = MMM_TO_MMS(parser.linearval('S', XY_PROBE_FEEDRATE));
 
-      const float x_min = probe.min_x(), x_max = probe.max_x(),
-                  y_min = probe.min_y(), y_max = probe.max_y();
+      //const float x_min = probe.min_x(), x_max = probe.max_x(),
+      //            y_min = probe.min_y(), y_max = probe.max_y();
+      const float x_min = PCB_MIN_X, x_max = PCB_MAX_X,
+                  y_min = PCB_MIN_Y, y_max = PCB_MAX_Y;
 
       if (parser.seen('H')) {
         const int16_t size = (int16_t)parser.value_linear_units();
